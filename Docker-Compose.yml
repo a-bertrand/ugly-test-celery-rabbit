@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8010:8010"
+    volumes:
+      - ./app:/app
+    entrypoint: []
+    tty: true
+    networks:
+      - localbound
+
+networks:
+  localbound:
+    external: true

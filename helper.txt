@@ -1,0 +1,2 @@
+ celery -A test worker -c 1 -Q tasks.slow,tasks.fast,tasks.middle --loglevel=info
+
